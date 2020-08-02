@@ -18,48 +18,51 @@
                 <a class="link nav__link" href="#">Energy</a>
                 <a class="link nav__link" href="#">Магазин</a>
                 <a class="link nav__link" href="#">Войти</a>
-                <div class="humburger-menu"></div>
             </nav>
+            <div class="humburger-menu"></div>
         </header>
         <main class="main">
-            <section class="section__preview">
+            <section class="preview">
                 <h1 class="preview__title">
                     Model S
                 </h1>
                 <h2 class="preview__subtitle">
                     Добро пожаловать в будущее!
                 </h2>
-                <img class="company-image" src="images/Tesla-company-name.png" alt="company-name">
-                <img class="car-image" src="images/tesla-png-tesla-png-hd-1636.png" alt="car">
+                <img class="preview__company-image" src="images/Tesla-company-name.png" alt="company-name">
+                <img class="preview__car-image" src="images/tesla-png-tesla-png-hd-1636.png" alt="car">
                 
-                <ul class="charact__list">
-                    <div class="charact__item">
-                        <img class="charact__img" src="images/Speed icon.png" alt="speed">
-                        <p class="charact__text">
-                            2,7 сек<br/>0-100 км/час
-                        </p>
-                    </div>
-                    <div class="charact__item">
-                        <img class="charact__img" src="images/Road icon.png" alt="reserve">
-                        <p class="charact__text">
-                            632 км<br/>запас хода
-                        </p>
-                    </div>
-                </ul>
-                <div class="order">
+                <div class="preview__car-characteristic car-characteristic">
+                    <ul class="car-characteristic__list">
+                        <div class="car-characteristic__item">
+                            <img class="car-characteristic__img" src="images/Speed icon.png" alt="speed">
+                            <p class="car-characteristic__text">
+                                2,7 сек<br/>0-100 км/час
+                            </p>
+                        </div>
+                        <div class="car-characteristic__item">
+                            <img class="car-characteristic__img" src="images/Road icon.png" alt="reserve">
+                            <p class="car-characteristic__text">
+                                632 км<br/>запас хода
+                            </p>
+                        </div>
+                    </ul>
+                </div>
+                <div class="preview__order order">
                     <label class="order__label">
                         <img class="order__image" src="images/Test-drive.png" alt="Test-drive">
                         Тест драйв
                     </label>
-                    <button type="button" name="preview-order" class="order__button order__button_red">Заказать</button>
+                    <button class="order__button order__button_red" type="button" name="preview-order">Заказать</button>
                 </div>
-                <img class="vector-bottom" src="images/Vector-1.png" alt="vector-bottom">
+                <img class="preview__vector-bottom" src="images/Vector-1.png" alt="vector-bottom">
             </section>
-            <section class="section section__interior">
+            <section class="interior">
                 <h1 class="interior__title">
                     Model S
                 </h1>
                 <img class="interior__image" src="images/Tesla-interior.png" alt="interior">
+
                 <div class="interior__description">
                     <h2 class="interior__subtitle">
                         Будущее вождения
@@ -67,44 +70,46 @@
                     <p class="interior__text">
                         Модель S обладает лучшей в своем классе вместимостью: в машине поместится до пяти взрослых и двух детей. Оснащена современным 17-дюймовым сенсорным экраном. Усовершенствованная шумовая инженерия создает динамику звука, сравнимую со студией звукозаписи, а стеклянная крыша обеспечивает просторный интерьер для каждого пассажира.
                     </p>
+
                     <ul class="interior__list">
                         <li class="interior__item interior-item">
-                            <div class="display-logo"></div>
+                            <div class="interior-item__display-logo"></div>
                             <p class="interior-item__desc">
                                 17 дюймов <br/> Большой дисплей
                             </p>
                         </li>
                         <li class="interior__item interior-item">
-                            <img class="wifi-logo" src="images/wifi.png" alt="wi-fi">
+                            <img class="interior-item__wifi-logo" src="images/wifi.png" alt="wi-fi">
                             <p class="interior-item__desc">
                                 Беспроводное обновление ПО <br/> Повышенная функциональность
                             </p>
                         </li>
                         <li class="interior__item">
-                            <div class="tank-logo"></div>
+                            <div class="interior-item__tank-logo"></div>
                             <p class="interior-item__desc">
                                 894 литра <br/> Объем грузового пространства
                             </p>
                         </li>
                     </ul>
-                    <div class="order-box order-box__interior">
+                    
+                    <div class="interior__order order">
                         <label class="order__label">
-                            <div class="label-more">i</div>
+                            <div class="order__label-more">i</div>
                             Узнать больше
                         </label>
-                        <button type="button" name="interior-order" class="order__button button__order_white">Заказать</button>
+                        <button class="order__button button__order_white" type="button" name="interior-order">Заказать</button>
                     </div>
                 </div>
             </section>
-            <section class="section section__safety">
+            <section class="safety">
                 <h1 class="safety__title">
                     Model S
                 </h1>
 
-                <div class="car-scheme">
-                    <img class="image-car-scheme" src="images/Car frame.png" alt="Car scheme">
+                <div class="safety__car-scheme car-scheme">
+                    <img class="car-scheme__image" src="images/Car frame.png" alt="Car scheme">
 
-                    <div class="scheme-point scheme-point_front">
+                    <div class="car-scheme__point car-scheme__point_front">
                         <div class="point__rect point__rect_front"></div>
                         <div class="point__circle point__circle_front"></div>
                         <p class="point__text point__text_front">
@@ -112,7 +117,7 @@
                         </p>
                     </div>
 
-                    <div class="scheme-point scheme-point_side">
+                    <div class="car-scheme__point car-scheme__point_side">
                         <div class="point__rect point__rect_side"></div>
                         <div class="point__circle point__circle_side"></div>
                         <p class="point__text point__text_side">
@@ -120,7 +125,7 @@
                         </p>
                     </div>
 
-                    <div class="scheme-point scheme-point_bottom">
+                    <div class="car-scheme__point car-scheme__point_bottom">
                         <div class="point__rect point__rect__bottom"></div>
                         <div class="point__circle point__circle_bottom"></div>
                         <p class="point__text point__text_botton">
@@ -136,85 +141,86 @@
                     <p class="safety__text">
                         Модель S достигла наивысшей оценки безопасности любого автомобиля, когда-либо испытанного, и установила рекорд по наименьшей вероятности травмы пассажиров - от несчастных случаев на переднем, боковом, заднем сидении и в ДТП с переворотом авто.
                     </p>
-
-                    <ul class="assessment-safety__list">
-                        <h3 class="assessment-safety__title">
-                            Оценка защиты:
-                        </h3>
-                        <li class="assessment-safety__item safety-item">
-                            <p class="safety-item__title">
-                                Спереди
-                            </p>
-                            <div class="rating-result">
-                                <span class="rating-result__item_active"></span>
-                                <span class="rating-result__item_active"></span>
-                                <span class="rating-result__item_active"></span>
-                                <span class="rating-result__item_active"></span>
-                                <span class="rating-result__item_active"></span>
-                            </div>
-                        </li>
-                        <li class="assessment-safety__item safety-item">
-                            <p class="safety-item__title">
-                                Сбоку
-                            </p>
-                            <div class="rating-result">
-                                <span class="rating-result__item_active"></span>
-                                <span class="rating-result__item_active"></span>
-                                <span class="rating-result__item_active"></span>
-                                <span class="rating-result__item_active"></span>
-                                <span class="rating-result__item_active"></span>
-                            </div>
-                        </li>
-                        <li class="assessment-safety__item safety-item">
-                            <p class="safety-item__title">
-                                Сбоку <span class="safety-item_small">(стойка)</span>
-                            </p>
-                            <div class="rating-result">
-                                <span class="rating-result__item_active"></span>
-                                <span class="rating-result__item_active"></span>
-                                <span class="rating-result__item_active"></span>
-                                <span class="rating-result__item_active"></span>
-                                <span class="rating-result__item_active"></span>
-                            </div>
-                        </li>
-                        <li class="assessment-safety__item safety-item">
-                            <p class="safety-item__title">
-                                Водитель
-                            </p>
-                            <div class="rating-result">
-                                <span class="rating-result__item_active"></span>
-                                <span class="rating-result__item_active"></span>
-                                <span class="rating-result__item_active"></span>
-                                <span class="rating-result__item_active"></span>
-                                <span class="rating-result__item_active"></span>
-                            </div>
-                        </li><li class="assessment-safety__item safety-item">
-                            <p class="safety-item__title">
-                                Пассажир
-                            </p>
-                            <div class="rating-result">
-                                <span class="rating-result__item_active"></span>
-                                <span class="rating-result__item_active"></span>
-                                <span class="rating-result__item_active"></span>
-                                <span class="rating-result__item_active"></span>
-                                <span class="rating-result__item_active"></span>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="rating-five">
+                    <div class="safety__assessment assessment">
+                        <ul class="assessment__list">
+                            <h3 class="assessment__title">
+                                Оценка защиты:
+                            </h3>
+                            <li class="assessment__item">
+                                <p class="assessment__name">
+                                    Спереди
+                                </p>
+                                <div class="assessment__rating-result rating-result">
+                                    <span class="rating-result__item_active"></span>
+                                    <span class="rating-result__item_active"></span>
+                                    <span class="rating-result__item_active"></span>
+                                    <span class="rating-result__item_active"></span>
+                                    <span class="rating-result__item_active"></span>
+                                </div>
+                            </li>
+                            <li class="assessment__item">
+                                <p class="assessment__name">
+                                    Сбоку
+                                </p>
+                                <div class="assessment__rating-result rating-result">
+                                    <span class="rating-result__item_active"></span>
+                                    <span class="rating-result__item_active"></span>
+                                    <span class="rating-result__item_active"></span>
+                                    <span class="rating-result__item_active"></span>
+                                    <span class="rating-result__item_active"></span>
+                                </div>
+                            </li>
+                            <li class="assessment__item">
+                                <p class="assessment__name">
+                                    Сбоку <span class="safety-item_small">(стойка)</span>
+                                </p>
+                                <div class="assessment__rating-result rating-result">
+                                    <span class="rating-result__item_active"></span>
+                                    <span class="rating-result__item_active"></span>
+                                    <span class="rating-result__item_active"></span>
+                                    <span class="rating-result__item_active"></span>
+                                    <span class="rating-result__item_active"></span>
+                                </div>
+                            </li>
+                            <li class="assessment__item">
+                                <p class="assessment__name">
+                                    Водитель
+                                </p>
+                                <div class="assessment__rating-result rating-result">
+                                    <span class="rating-result__item_active"></span>
+                                    <span class="rating-result__item_active"></span>
+                                    <span class="rating-result__item_active"></span>
+                                    <span class="rating-result__item_active"></span>
+                                    <span class="rating-result__item_active"></span>
+                                </div>
+                            </li>
+                            <li class="assessment__item">
+                                <p class="assessment__name">
+                                    Пассажир
+                                </p>
+                                <div class="assessment__rating-result rating-result">
+                                    <span class="rating-result__item_active"></span>
+                                    <span class="rating-result__item_active"></span>
+                                    <span class="rating-result__item_active"></span>
+                                    <span class="rating-result__item_active"></span>
+                                    <span class="rating-result__item_active"></span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="safety__rating-five rating-five">
                         <img class="rating-five__shield" src="images/shield.png">
-                        <div class="shield-daw">✓</div>
+                        <div class="rating-five__shield-daw">✓</div>
                         <p>
                             5 звезд <br/> безопасности
                         </p>
                     </div>
-                    
                     <div class="order-box order-box__safety">
                         <label class="order__label">
-                            <div class="label-more">i</div>
+                            <div class="order__label-more">i</div>
                             Узнать больше
                         </label>
-                        <button type="button" name="safety-order" class="order__button button__order_white">Заказать</button>
+                        <button class="order__button button__order_white" type="button" name="safety-order">Заказать</button>
                     </div>
                 </div>
             </section>
