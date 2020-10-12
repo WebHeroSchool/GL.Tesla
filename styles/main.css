@@ -1,0 +1,423 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 18px;
+    margin: 0;
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+
+/* header */
+
+.header {
+    margin: 0 auto;
+}
+
+.header__logo img {
+    width: 166px;
+    height: 51px;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 24px 60px 58px 42.72px;
+}
+
+.nav__models,
+.nav__login {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    white-space: nowrap;
+}
+
+.nav__login .nav__link {
+    margin-right: 30px;
+}
+
+.nav__link {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    color: #000000;
+    text-decoration: none;
+    padding-bottom: 6px;
+    border-bottom: 2px transparent solid;
+    transition: 0.2s;
+}
+
+.nav__link:hover,
+.nav__link_active {
+    border-bottom: 2px solid #E51937;
+    color: #E51937;
+}
+
+.nav__models a:nth-child(1) {
+    margin-right: 63.14px;
+}
+
+.nav__models a:nth-child(2) {
+    margin-right: 24.86px;
+}
+
+.nav__models a:nth-child(3) {
+    margin-right: 44px;
+}
+
+.nav__models a:nth-child(4) {
+    margin-right: 44px;
+}
+
+.burger-menu {
+    width: 24px;
+    height: 15px;
+    cursor: pointer;
+}
+
+.preview_model {
+    text-align: center;
+    background-image: url(../images/Tesla+car.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0px 20px;
+    width: 1514px;
+    min-height: 594px;
+    max-width: 100%;
+    margin-bottom: 26px;
+}
+
+.preview__model__title {
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    font-size: 90px;
+    line-height: 110px;
+}
+
+.preview__model__subtitle {
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+
+/* Первая секция */
+
+.preview__car-characteristic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 37px;
+}
+
+.car-characteristic__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 81px;
+}
+
+.car-characteristic__img {
+    width: 46px;
+    margin-right: 14px;
+}
+
+.car-characteristic__text_top {
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 43px;
+}
+
+.car-characteristic__text_top span {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    vertical-align: middle;
+    margin-bottom: 13px;
+}
+
+.car-characteristic__text_bottom {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.test__image {
+    margin-right: 7px;
+}
+
+.preview__test {
+    display: flex;
+    align-items: center;
+    filter: drop-shadow(0px 4px 2px rgb(150, 150, 150));
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+    margin-right: 47px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 1.0s;
+    color: #000000;
+}
+
+.preview__test:hover .test__image {
+    animation: rotate_drive ease-in-out 1s 1;
+}
+
+@keyframes rotate_drive {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    25% {
+        transform: rotateZ(-90deg);
+    }
+    50% {
+        transform: rotateZ(90deg);
+    }
+    75% {
+        transform: rotateZ(-90deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+.order__button {
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 160px;
+    height: 40px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: color, background-color 0.3s;
+}
+
+.order__button_red {
+    border: 2px solid #E51937;
+    color: #E51937;
+}
+
+.order__button_red:hover,
+.order__button_red:focus {
+    color: #fff;
+    background-color: #E51937;
+}
+
+.preview__vector-bottom {
+    display: block;
+    text-align: center;
+}
+
+
+/* Временно */
+
+.interior,
+.safety {
+    display: none;
+}
+
+@media (max-width: 768px) and (min-width: 375px) {
+    .wrapper {
+        max-width: 768px;
+    }
+    .burger-menu {
+        width: 35px;
+        height: 22px;
+    }
+    .header__nav {
+        justify-content: space-between;
+        margin: 5px 19px 30px 2px;
+    }
+    .nav__link {
+        display: none;
+    }
+    .preview_model {
+        max-width: 768px;
+        min-height: 400px;
+        background-position: 0px 90px;
+    }
+    .preview__model__title {
+        font-weight: 600;
+        font-size: 90px;
+        line-height: 110px;
+    }
+    .preview__model__subtitle {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 18px;
+    }
+    .car-characteristic__item {
+        margin-right: 0px;
+    }
+    .preview__car-characteristic {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        flex-direction: row;
+        align-content: center;
+        margin: 0px 140px 63px 130px;
+    }
+    .car-characteristic__img {
+        width: 65px;
+    }
+    .preview__car-characteristic .car-characteristic__item:nth-child(-n+2) {
+        margin-bottom: 43px;
+    }
+    .car-characteristic__text_top {
+        font-weight: 600;
+        font-size: 50px;
+        line-height: 61px;
+    }
+    .car-characteristic__text_top span {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .car-characteristic__text_bottom {
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 15px;
+    }
+    .order__button {
+        font-weight: bold;
+        font-size: 13px;
+        line-height: 16px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .test__image {
+        width: 30px;
+        height: 30px;
+        content: url(../images/Test-drive_red.svg);
+    }
+    .preview__test {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        text-transform: uppercase;
+        color: #E51937;
+        filter: none;
+    }
+    .order__button {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        text-transform: uppercase;
+        width: 220px;
+        height: 55px;
+    }
+}
+
+@media (max-width: 375px) {
+    .wrapper {
+        width: 375px;
+    }
+    .header__logo img {
+        width: 138px;
+        height: 42px;
+    }
+    .burger-menu {
+        width: 23px;
+        height: 15px;
+    }
+    .header__nav {
+        justify-content: space-between;
+        margin: 5px 19px 30px 2px;
+    }
+    .nav__link {
+        display: none;
+    }
+    .preview_model {
+        width: 375px;
+        min-height: 220px;
+        background-position: 0px 60px;
+    }
+    .preview__model__title {
+        font-weight: 600;
+        font-size: 50px;
+        line-height: 61px;
+    }
+    .preview__model__subtitle {
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 12px;
+    }
+    .car-characteristic__item {
+        margin-right: 0px;
+    }
+    .preview__car-characteristic {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        flex-direction: row;
+        align-content: center;
+        margin: 0px 36px 34px 36px;
+    }
+    .car-characteristic__img {
+        width: 38px;
+    }
+    .preview__car-characteristic .car-characteristic__item:nth-child(-n+2) {
+        margin-bottom: 43px;
+    }
+    .car-characteristic__text_top {
+        font-weight: 600;
+        font-size: 27px;
+        line-height: 33px;
+    }
+    .car-characteristic__text_top span {
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 18px;
+    }
+    .car-characteristic__text_bottom {
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 12px;
+    }
+    .order__button {
+        font-weight: bold;
+        font-size: 13px;
+        line-height: 16px;
+        text-align: center;
+        text-transform: uppercase;
+        width: 160px;
+        height: 40px;
+    }
+    .test__image {
+        width: 22px;
+        height: 22px;
+        content: url(../images/Test-drive_red.svg);
+    }
+    .preview__test {
+        font-weight: bold;
+        font-size: 13px;
+        line-height: 16px;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 0px;
+        color: #E51937;
+        filter: none;
+    }
+}
