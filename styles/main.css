@@ -247,14 +247,15 @@ body {
     }
     .header__nav {
         justify-content: space-between;
-        margin: 5px 19px 30px 2px;
+        margin: 5px 19px 80px 2px;
     }
     .nav__link {
         display: none;
     }
     .preview_model {
         max-width: 768px;
-        min-height: 400px;
+        min-height: 550px;
+        background-image: url(../images/Tesla+car_tablet.jpg);
         background-position: 0px 90px;
     }
     .preview__model__title {
@@ -328,6 +329,14 @@ body {
         text-transform: uppercase;
         width: 220px;
         height: 55px;
+        background-color: #E51937;
+        color: #fff;
+        transition: 0.2s;
+    }
+    .order__button:hover,
+    .order__button:focus {
+        color: #E51937;
+        background-color: #fff;
     }
 }
 
@@ -352,8 +361,9 @@ body {
     }
     .preview_model {
         width: 375px;
-        min-height: 220px;
-        background-position: 0px 60px;
+        min-height: 272px;
+        background-image: url(../images/Tesla+car_mobile.jpg);
+        background-position: 0px 115px;
     }
     .preview__model__title {
         font-weight: 600;
@@ -404,6 +414,14 @@ body {
         text-transform: uppercase;
         width: 160px;
         height: 40px;
+        background-color: #E51937;
+        color: #fff;
+        transition: 0.2s;
+    }
+    .order__button:hover,
+    .order__button:focus {
+        color: #E51937;
+        background-color: #fff;
     }
     .test__image {
         width: 22px;
