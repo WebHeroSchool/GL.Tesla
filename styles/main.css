@@ -34,29 +34,50 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 24px 60px 58px 42.72px;
+    margin: 24px 60px 55px 42.72px;
 }
 
 .nav__models,
 .nav__login {
     padding: 0;
-    display: flex;
-    justify-content: space-between;
+    display: inline-block;
     list-style: none;
     white-space: nowrap;
 }
 
-.nav__login .nav__link {
-    margin-right: 30px;
+.nav__models a:nth-child(1) {
+    margin-left: 36.1px;
+    margin-right: 59.4px;
+}
+
+.nav__models a:nth-child(2) {
+    margin-right: 22px;
+}
+
+.nav__models a:nth-child(3) {
+    margin-right: 40px;
+}
+
+.nav__models a:nth-child(4) {
+    margin-right: 43px;
+}
+
+.nav__login .shop__link {
+    margin-right: 28px;
+}
+
+.nav__login .login__link {
+    margin-right: 28px;
 }
 
 .nav__link {
     font-weight: 600;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 18px;
     color: #000000;
     text-decoration: none;
-    padding-bottom: 6px;
+    padding-bottom: 5px;
+    margin-top: 0px;
     border-bottom: 2px transparent solid;
     transition: 0.2s;
 }
@@ -67,26 +88,14 @@ body {
     color: #E51937;
 }
 
-.nav__models a:nth-child(1) {
-    margin-right: 63.14px;
-}
-
-.nav__models a:nth-child(2) {
-    margin-right: 24.86px;
-}
-
-.nav__models a:nth-child(3) {
-    margin-right: 44px;
-}
-
-.nav__models a:nth-child(4) {
-    margin-right: 44px;
-}
-
 .burger-menu {
     width: 24px;
     height: 15px;
     cursor: pointer;
+}
+
+.preview {
+    max-width: 100%;
 }
 
 .preview_model {
@@ -94,8 +103,7 @@ body {
     background-image: url(../images/Tesla+car.jpg);
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: 0px 20px;
-    width: 1514px;
+    background-position: 0px calc(50%);
     min-height: 594px;
     max-width: 100%;
     margin-bottom: 26px;
@@ -105,7 +113,7 @@ body {
     margin: 0;
     padding: 0;
     font-weight: 600;
-    font-size: 90px;
+    font-size: 95px;
     line-height: 110px;
 }
 
@@ -113,39 +121,69 @@ body {
     margin: 0;
     padding: 0;
     font-weight: 500;
-    font-size: 15px;
-    line-height: 18px;
+    font-size: 17px;
+    line-height: 0px;
 }
 
 
 /* Первая секция */
 
-.preview__car-characteristic {
+.preview__characteristic {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 37px;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
 }
 
-.car-characteristic__item {
+.characteristic__list {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 81px;
 }
 
-.car-characteristic__img {
+.characteristic__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.characteristic__list .characteristic__item:nth-child(1) {
+    margin-right: 80px;
+}
+
+.characteristic__list .characteristic__item:nth-child(2) {
+    margin-right: 111px;
+}
+
+.characteristic__list .characteristic__item:nth-child(2) .characteristic__img {
+    margin-right: 1px;
+}
+
+.characteristic__text {
+    align-self: flex-start;
+}
+
+.preview__order {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.characteristic__img {
     width: 46px;
     margin-right: 14px;
 }
 
-.car-characteristic__text_top {
+.characteristic__text_top {
     font-weight: 600;
     font-size: 35px;
     line-height: 43px;
+    white-space: nowrap;
 }
 
-.car-characteristic__text_top span {
+.characteristic__text_top span {
     font-weight: 600;
     font-size: 20px;
     line-height: 24px;
@@ -153,7 +191,7 @@ body {
     margin-bottom: 13px;
 }
 
-.car-characteristic__text_bottom {
+.characteristic__text_bottom {
     font-weight: normal;
     font-size: 12px;
     line-height: 15px;
@@ -163,7 +201,7 @@ body {
     margin-right: 7px;
 }
 
-.preview__test {
+.order__test {
     display: flex;
     align-items: center;
     filter: drop-shadow(0px 4px 2px rgb(150, 150, 150));
@@ -176,9 +214,10 @@ body {
     cursor: pointer;
     transition: transform 1.0s;
     color: #000000;
+    white-space: nowrap;
 }
 
-.preview__test:hover .test__image {
+.order__test:hover .test__image {
     animation: rotate_drive ease-in-out 1s 1;
 }
 
@@ -237,17 +276,27 @@ body {
     display: none;
 }
 
+@media (max-width: 1024px) and (min-width: 768px) {
+    .nav__link {
+        display: none;
+    }
+    .preview__characteristic {
+        justify-content: center;
+        align-self: center;
+    }
+}
+
 @media (max-width: 768px) and (min-width: 375px) {
     .wrapper {
         max-width: 768px;
     }
-    .burger-menu {
+    .burger-menu img {
         width: 35px;
         height: 22px;
+        margin-right: 15px;
     }
     .header__nav {
-        justify-content: space-between;
-        margin: 5px 19px 80px 2px;
+        margin: 25px 19px 75px 15px;
     }
     .nav__link {
         display: none;
@@ -256,7 +305,7 @@ body {
         max-width: 768px;
         min-height: 550px;
         background-image: url(../images/Tesla+car_tablet.jpg);
-        background-position: 0px 90px;
+        background-position: 0px calc(50% + 40px);
     }
     .preview__model__title {
         font-weight: 600;
@@ -265,62 +314,64 @@ body {
     }
     .preview__model__subtitle {
         font-weight: 500;
-        font-size: 15px;
-        line-height: 18px;
+        font-size: 17px;
+        line-height: 0px;
     }
-    .car-characteristic__item {
+    /* Характеристики */
+    .characteristic__list {
+        max-width: 375px;
+        max-width: 100%;
+    }
+    .characteristic__item {
         margin-right: 0px;
     }
-    .preview__car-characteristic {
-        flex-wrap: wrap;
-        justify-content: space-around;
-        flex-direction: row;
-        align-content: center;
-        margin: 0px 140px 63px 130px;
+    .preview__characteristic {
+        margin: 0px 40px 60px 130px;
     }
-    .car-characteristic__img {
-        width: 65px;
+    .characteristic__img {
+        width: 69px;
     }
-    .preview__car-characteristic .car-characteristic__item:nth-child(-n+2) {
-        margin-bottom: 43px;
+    .characteristic__list .characteristic__item:nth-child(1) {
+        margin: 0px 70px 25px 0px;
     }
-    .car-characteristic__text_top {
+    .characteristic__text_top {
         font-weight: 600;
-        font-size: 50px;
-        line-height: 61px;
+        font-size: 55px;
+        line-height: 51px;
     }
-    .car-characteristic__text_top span {
+    .characteristic__text_top span {
         font-weight: 600;
         font-size: 20px;
-        line-height: 24px;
+        line-height: 23px;
     }
-    .car-characteristic__text_bottom {
+    .characteristic__text_bottom {
         font-weight: normal;
         font-size: 12px;
         line-height: 15px;
     }
-    .order__button {
-        font-weight: bold;
-        font-size: 13px;
-        line-height: 16px;
-        text-align: center;
-        text-transform: uppercase;
+    .preview__order {
+        margin-top: 34px;
+        max-width: 100%;
     }
     .test__image {
         width: 30px;
         height: 30px;
         content: url(../images/Test-drive_red.svg);
+        margin-right: 15px;
     }
-    .preview__test {
+    .order__test {
         font-weight: bold;
         font-size: 16px;
         line-height: 20px;
         display: flex;
         align-items: center;
-        text-align: center;
         text-transform: uppercase;
         color: #E51937;
         filter: none;
+        margin-right: 48px;
+    }
+    .test_label {
+        line-height: 25px;
     }
     .order__button {
         font-weight: bold;
@@ -332,6 +383,7 @@ body {
         background-color: #E51937;
         color: #fff;
         transition: 0.2s;
+        margin-right: 90px;
     }
     .order__button:hover,
     .order__button:focus {
@@ -340,30 +392,29 @@ body {
     }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 650px) and (min-width: 375px) {
     .wrapper {
-        width: 375px;
+        max-width: 375px;
     }
     .header__logo img {
         width: 138px;
         height: 42px;
     }
-    .burger-menu {
+    .burger-menu img {
         width: 23px;
         height: 15px;
     }
     .header__nav {
         justify-content: space-between;
-        margin: 5px 19px 30px 2px;
+        margin: 5px 5px 28px 2px;
     }
     .nav__link {
         display: none;
     }
     .preview_model {
-        width: 375px;
-        min-height: 272px;
-        background-image: url(../images/Tesla+car_mobile.jpg);
-        background-position: 0px 115px;
+        max-width: 375px;
+        min-height: 270px;
+        background: url(../images/Tesla-Wordmark-Red.jpg) no-repeat 0px 78px, url(../images/Tesla+car_mobile.jpg) no-repeat 9px calc(50% + 66px);
     }
     .preview__model__title {
         font-weight: 600;
@@ -372,36 +423,36 @@ body {
     }
     .preview__model__subtitle {
         font-weight: 500;
-        font-size: 10px;
-        line-height: 12px;
+        font-size: 11px;
+        line-height: 2px;
     }
-    .car-characteristic__item {
-        margin-right: 0px;
+    /* Характеристики */
+    .preview__characteristic {
+        margin: 0px;
+        justify-content: center;
     }
-    .preview__car-characteristic {
-        flex-wrap: wrap;
-        justify-content: space-between;
-        flex-direction: row;
-        align-content: center;
-        margin: 0px 36px 34px 36px;
+    .characteristic__list {
+        max-width: 375px;
+        max-width: 100%;
+        margin: 0px;
     }
-    .car-characteristic__img {
+    .characteristic__item {
+        margin: 0px;
+    }
+    .characteristic__img {
         width: 38px;
     }
-    .preview__car-characteristic .car-characteristic__item:nth-child(-n+2) {
-        margin-bottom: 43px;
-    }
-    .car-characteristic__text_top {
+    .characteristic__text_top {
         font-weight: 600;
         font-size: 27px;
         line-height: 33px;
     }
-    .car-characteristic__text_top span {
+    .characteristic__text_top span {
         font-weight: 600;
         font-size: 15px;
         line-height: 18px;
     }
-    .car-characteristic__text_bottom {
+    .characteristic__text_bottom {
         font-weight: normal;
         font-size: 10px;
         line-height: 12px;
@@ -428,7 +479,7 @@ body {
         height: 22px;
         content: url(../images/Test-drive_red.svg);
     }
-    .preview__test {
+    .preview__order {
         font-weight: bold;
         font-size: 13px;
         line-height: 16px;
