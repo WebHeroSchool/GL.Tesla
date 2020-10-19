@@ -149,12 +149,12 @@ body {
     align-items: center;
 }
 
-.characteristic__list .characteristic__item:nth-child(1) {
-    margin-right: 80px;
+.characteristic__list {
+    margin-right: 111px;
 }
 
-.characteristic__list .characteristic__item:nth-child(2) {
-    margin-right: 111px;
+.characteristic__list .characteristic__item:nth-child(1) {
+    margin-right: 80px;
 }
 
 .characteristic__list .characteristic__item:nth-child(2) .characteristic__img {
@@ -281,8 +281,16 @@ body {
         display: none;
     }
     .preview__characteristic {
-        justify-content: center;
-        align-self: center;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+    }
+    .characteristic__list {
+        margin-right: 0px;
+    }
+    .preview__order {
+        margin-top: 34px;
+        max-width: 100%;
     }
 }
 
@@ -321,12 +329,13 @@ body {
     .characteristic__list {
         max-width: 375px;
         max-width: 100%;
+        margin: 0px 0px 34px 0px;
     }
     .characteristic__item {
         margin-right: 0px;
     }
     .preview__characteristic {
-        margin: 0px 40px 60px 130px;
+        margin: 0px 0px 60px 0px;
     }
     .characteristic__img {
         width: 69px;
@@ -350,8 +359,7 @@ body {
         line-height: 15px;
     }
     .preview__order {
-        margin-top: 34px;
-        max-width: 100%;
+        margin: 0px;
     }
     .test__image {
         width: 30px;
@@ -383,7 +391,6 @@ body {
         background-color: #E51937;
         color: #fff;
         transition: 0.2s;
-        margin-right: 90px;
     }
     .order__button:hover,
     .order__button:focus {
@@ -392,7 +399,7 @@ body {
     }
 }
 
-@media (max-width: 650px) and (min-width: 375px) {
+@media (max-width: 530px) {
     .wrapper {
         max-width: 375px;
     }
@@ -428,16 +435,15 @@ body {
     }
     /* Характеристики */
     .preview__characteristic {
-        margin: 0px;
+        margin: 0px 0px 21px 0px;
         justify-content: center;
     }
     .characteristic__list {
         max-width: 375px;
-        max-width: 100%;
-        margin: 0px;
+        margin: 15px 0px 28px 0px;
     }
-    .characteristic__item {
-        margin: 0px;
+    .characteristic__list .characteristic__item:nth-child(1) {
+        margin: 0px 41px 0px 0px;
     }
     .characteristic__img {
         width: 38px;
@@ -457,6 +463,34 @@ body {
         font-size: 10px;
         line-height: 12px;
     }
+    .preview__order {
+        font-weight: bold;
+        font-size: 13px;
+        line-height: 16px;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 0px;
+        color: #E51937;
+        filter: none;
+    }
+    .order__test {
+        font-weight: bold;
+        font-size: 13px;
+        line-height: 16px;
+        text-align: center;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        color: #E51937;
+        filter: none;
+        margin-right: 32px;
+    }
+    .test__image {
+        width: 22px;
+        height: 22px;
+        content: url(../images/Test-drive_red.svg);
+        margin-right: 7px;
+    }
     .order__button {
         font-weight: bold;
         font-size: 13px;
@@ -473,20 +507,5 @@ body {
     .order__button:focus {
         color: #E51937;
         background-color: #fff;
-    }
-    .test__image {
-        width: 22px;
-        height: 22px;
-        content: url(../images/Test-drive_red.svg);
-    }
-    .preview__order {
-        font-weight: bold;
-        font-size: 13px;
-        line-height: 16px;
-        text-align: center;
-        text-transform: uppercase;
-        margin: 0px;
-        color: #E51937;
-        filter: none;
     }
 }
