@@ -416,25 +416,122 @@ body {
 }
 
 .safety__inner {
+    max-width: 1440px;
     display: flex;
-    justify-content: space-between;
-    background: url(../images/Car_frame_group.png) no-repeat;
-    width: 100%;
+    flex-direction: row;
+}
+
+.safety__car-model {
+    position: absolute;
+    margin-top: 170px;
+    right: 14.6%;
+}
+
+.safety__logo {
+    position: absolute;
+    font-weight: 600;
+    font-size: 200px;
+    color: #E51937;
+    opacity: 0.1;
+    right: 14.6%;
+    margin-top: 220px;
 }
 
 .safety__description {
+    display: flex;
+    align-items: center;
     width: 440px;
     background-color: #E51937;
     display: flex;
     flex-direction: column;
+    color: #ffffff;
+}
+
+.safety__description-inner {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.safety__subdescription {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* margin-top: 50px; */
+}
+
+.safety__subtitle {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 37px;
+    margin: 0;
+}
+
+.safety__text {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+.safety__order {
+    display: flex;
+    align-items: center;
+}
+
+.assessment__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.assessment__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.assessment__title {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 37px;
+}
+
+.assessment__name {
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 21px;
+    text-transform: uppercase;
+    margin: 0px 0px 15px 0px;
+}
+
+.rating-result__item_active {
+    content: url(/images/Star.svg);
+}
+
+.safety__rating-five {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px
+}
+
+.rating-five__text_top {
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 61px;
+}
+
+.rating-five__text_bottom {
+    font-weight: 600;
+    font-size: 25px;
 }
 
 
-/* Временно */
-
-.safety {
-    display: none;
-}
+/* Адаптивы */
 
 @media (max-width: 1024px) and (min-width: 768px) {
     .nav__link {
