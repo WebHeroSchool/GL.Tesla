@@ -94,8 +94,12 @@ body {
     cursor: pointer;
 }
 
+
+/* Первая секция */
+
 .preview {
     max-width: 100%;
+    margin-bottom: 30px;
 }
 
 .preview_model {
@@ -125,15 +129,11 @@ body {
     line-height: 0px;
 }
 
-
-/* Первая секция */
-
 .preview__characteristic {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 37px;
-    /* flex-direction: row; */
+    margin-bottom: 27px;
     flex-wrap: wrap;
 }
 
@@ -269,9 +269,169 @@ body {
 }
 
 
+/* Вторая секция */
+
+.interior {
+    color: #fff;
+}
+
+.interior__inner {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.interior__title {
+    height: 900px;
+    background: url(../images/Tesla-interior.png) no-repeat;
+    background-position: 0px 55px;
+    width: 100%;
+}
+
+.interior__title h2 {
+    font-weight: 600;
+    font-size: 70px;
+    line-height: 85px;
+    color: #E51937;
+    margin: 67px 0px 0px 80px;
+}
+
+.interior__description {
+    background-color: #E51937;
+    height: auto;
+    width: 638px;
+}
+
+.interior__subtitle {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 37px;
+    margin: 51px 72px 11px 52px;
+    white-space: nowrap;
+}
+
+.interior__text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    margin: 0px 72px 74px 52px;
+}
+
+.interior__list {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    list-style: none;
+    margin: 0px 72px 137px 52px;
+}
+
+.interior__list .interior__item:nth-child(2) {
+    margin: 0px 0px 35px 0px;
+}
+
+.interior__list .interior__item:nth-child(3) .interior-item__desc {
+    margin: 5px 0px 0px 8px;
+    line-height: 25px;
+}
+
+.interior__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.interior-item__img {
+    margin-right: 16px;
+}
+
+.interior-item__title {
+    font-weight: 600;
+    font-size: 37px;
+    margin: 0;
+}
+
+.interior-item__title_wireless {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 18px;
+    margin: 0;
+}
+
+.interior-item__text {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    margin: 0;
+}
+
+.interior-item__title span {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.interior__order {
+    display: flex;
+    align-items: center;
+    margin-left: 48px;
+}
+
+.order__label-more {
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    bottom: 1px solid #fff;
+    margin-right: 42px;
+    cursor: pointer;
+}
+
+.order__label-more::first-letter {
+    display: block;
+    text-transform: lowercase;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    padding: 2px 8px;
+    margin-right: 4px;
+}
+
+.order__button_white {
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.order__button_white:hover,
+.order__button_white:focus {
+    background-color: #fff;
+    color: #E51937;
+}
+
+
+/* Третья секция */
+
+.safety {
+    height: 900px;
+    display: flex;
+}
+
+.safety__inner {
+    display: flex;
+    justify-content: space-between;
+    background: url(../images/Car_frame_group.png) no-repeat;
+    width: 100%;
+}
+
+.safety__description {
+    width: 440px;
+    background-color: #E51937;
+    display: flex;
+    flex-direction: column;
+}
+
+
 /* Временно */
 
-.interior,
 .safety {
     display: none;
 }
@@ -308,6 +468,9 @@ body {
     }
     .nav__link {
         display: none;
+    }
+    .preview {
+        margin-bottom: 0px;
     }
     .preview_model {
         max-width: 768px;
@@ -405,6 +568,106 @@ body {
     .order__button:focus {
         color: #E51937;
         background-color: #fff;
+    }
+    /* Вторая секция */
+    .interior__inner {
+        flex-direction: column;
+        /* height: 1130px; */
+    }
+    .interior__title {
+        background-image: url(../images/Tesla-interior_tablet.jpg);
+        height: 555px;
+    }
+    .interior__description {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 490px;
+    }
+    .interior__subdescription {
+        display: flex;
+        flex-direction: column;
+        margin: 58px 120px 0px 35px;
+    }
+    .interior__subtitle {
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 37px;
+        margin: 0px 0px 20px 0px;
+    }
+    .interior__text {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 18px;
+        width: 300px;
+        margin: 0px;
+    }
+    .interior__list {
+        justify-content: flex-start;
+        margin: 69px 0px 0px 0px;
+        max-width: 250px;
+    }
+    .interior__item {
+        margin-bottom: 20px;
+    }
+    .interior-item__title_wireless {
+        margin-top: 5px;
+    }
+    .interior__list .interior__item:nth-child(2) {
+        margin: 0px 0px 25px 0px;
+    }
+    .interior__list .interior__item:nth-child(2) img {
+        height: 34px;
+        width: 44px;
+    }
+    .interior__list .interior__item:nth-child(3) .interior-item__desc {
+        margin: 0px 0px 0px 8px;
+        line-height: 35px;
+    }
+    .interior__order {
+        margin-left: 155px;
+        margin-bottom: 32px;
+    }
+    .order__label-more {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        align-items: center;
+        text-align: center;
+        text-transform: uppercase;
+        margin-right: 53px;
+        white-space: nowrap;
+    }
+    .order__label-more::first-letter {
+        display: block;
+        text-transform: lowercase;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        padding: 5px 11px;
+        margin-right: 8px;
+    }
+}
+
+@media (max-width: 722px) {
+    .interior__list {
+        display: none;
+    }
+    .interior__description {
+        justify-content: center;
+    }
+    .interior__text {
+        width: 80%;
+        align-self: center;
+    }
+    .interior__subtitle {
+        text-align: center;
+    }
+    .interior__subdescription {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .interior__order {
+        margin-left: 0px;
     }
 }
 
@@ -525,5 +788,30 @@ body {
     .order__button:focus {
         color: #E51937;
         background-color: #fff;
+    }
+    .interior__description {
+        height: auto;
+    }
+    .interior__order {
+        display: none;
+    }
+    .interior__title {
+        background: url(../images/Tesla-interior_mobile.jpg) no-repeat;
+        background-position: 0px -8px;
+        height: 318px;
+    }
+    .interior__title h2 {
+        display: none;
+    }
+    .interior__subdescription {
+        margin: 18px 0px 0px 26px;
+    }
+    .interior__subtitle {
+        margin-bottom: 10px;
+        text-align: left;
+    }
+    .interior__text {
+        margin-bottom: 40px;
+        align-self: flex-start;
     }
 }
