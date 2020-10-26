@@ -424,16 +424,22 @@ body {
 .safety__car-model {
     position: absolute;
     margin-top: 170px;
-    right: 14.6%;
+    left: 30.2%;
+}
+
+.safety__car-model img {
+    position: relative;
+    max-width: 100%;
+    height: auto;
 }
 
 .safety__logo {
     position: absolute;
     font-weight: 600;
-    font-size: 200px;
+    font-size: 11vw;
     color: #E51937;
     opacity: 0.1;
-    right: 14.6%;
+    right: calc(12.6%);
     margin-top: 220px;
 }
 
@@ -452,14 +458,14 @@ body {
     flex-direction: column;
     width: 75%;
     margin-top: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 95px;
 }
 
 .safety__subdescription {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* margin-top: 50px; */
+    margin-bottom: 10px;
 }
 
 .safety__subtitle {
@@ -473,11 +479,6 @@ body {
     font-weight: 500;
     font-size: 15px;
     line-height: 18px;
-}
-
-.safety__order {
-    display: flex;
-    align-items: center;
 }
 
 .assessment__list {
@@ -507,6 +508,11 @@ body {
     margin: 0px 0px 15px 0px;
 }
 
+.assessment__rating-result {
+    line-height: 36px;
+    margin-right: 37px;
+}
+
 .rating-result__item_active {
     content: url(/images/Star.svg);
 }
@@ -514,20 +520,32 @@ body {
 .safety__rating-five {
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
-    margin-bottom: 30px
+    margin-bottom: 63px;
+    margin-left: 30%;
+    width: 100%;
+}
+
+.rating-five__shield {
+    margin-right: 20px;
 }
 
 .rating-five__text_top {
     font-weight: 600;
-    font-size: 50px;
+    font-size: 54px;
     line-height: 61px;
 }
 
 .rating-five__text_bottom {
     font-weight: 600;
-    font-size: 25px;
+    font-size: 28px;
+    line-height: 12px;
+}
+
+.safety__order {
+    display: flex;
+    align-items: center;
+    margin-right: 4%;
 }
 
 
@@ -548,6 +566,70 @@ body {
     .preview__order {
         margin-top: 34px;
         max-width: 100%;
+    }
+    /* Третья секция */
+    .safety__inner {
+        flex-direction: column;
+    }
+    .safety__car-model {
+        position: relative;
+        margin: 75px 30px 32px 0px;
+        left: 0%;
+        order: 1;
+        background: Url(/images/Model_S.png) no-repeat;
+        background-position: 64% -10px;
+    }
+    .safety__car-model img {
+        max-width: auto;
+        height: auto;
+        content: url(/images/Car_frame_group_tablet.png);
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+    }
+    .safety__logo {
+        display: none;
+    }
+    .safety__description {
+        width: auto;
+        order: 2;
+    }
+    .safety__rating-five {
+        display: none;
+    }
+    .safety__subdescription {
+        width: 40%;
+    }
+    .safety__description-inner {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        margin: 50px 0px 62px 0px;
+    }
+    .assessment__title {
+        font-weight: 600;
+        font-size: 30px;
+        margin-top: 10px;
+    }
+    .assessment__item {
+        display: flex;
+        justify-content: space-between;
+    }
+    .assessment__name {
+        display: flex;
+        flex-direction: row;
+        white-space: nowrap;
+    }
+    .assessment__rating-result {
+        line-height: 36px;
+        margin-right: 12px;
+        margin-left: 10px;
+    }
+    .safety__order {
+        margin-right: 0;
+        margin-bottom: 65px;
     }
 }
 
@@ -743,6 +825,70 @@ body {
         padding: 5px 11px;
         margin-right: 8px;
     }
+    /* Третья секция */
+    .safety__inner {
+        flex-direction: column;
+    }
+    .safety__car-model {
+        position: relative;
+        margin: 75px 30px 32px 0px;
+        left: 0%;
+        order: 1;
+        background: Url(/images/Model_S.png) no-repeat;
+        background-position: 64% -10px;
+    }
+    .safety__car-model img {
+        max-width: auto;
+        height: auto;
+        content: url(/images/Car_frame_group_tablet.png);
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+    }
+    .safety__logo {
+        display: none;
+    }
+    .safety__description {
+        width: auto;
+        order: 2;
+    }
+    .safety__rating-five {
+        display: none;
+    }
+    .safety__subdescription {
+        width: 40%;
+    }
+    .safety__description-inner {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        margin: 50px 0px 62px 0px;
+    }
+    .assessment__title {
+        font-weight: 600;
+        font-size: 30px;
+        margin-top: 10px;
+    }
+    .assessment__item {
+        display: flex;
+        justify-content: space-between;
+    }
+    .assessment__name {
+        display: flex;
+        flex-direction: row;
+        white-space: nowrap;
+    }
+    .assessment__rating-result {
+        line-height: 36px;
+        margin-right: 12px;
+        margin-left: 10px;
+    }
+    .safety__order {
+        margin-right: 0;
+        margin-bottom: 65px;
+    }
 }
 
 @media (max-width: 722px) {
@@ -910,5 +1056,57 @@ body {
     .interior__text {
         margin-bottom: 40px;
         align-self: flex-start;
+    }
+    /* Третья секция */
+    .safety__car-model {
+        position: relative;
+        margin: 55px 30px 32px 0px;
+        order: 1;
+        background: Url(/images/Model_S.png) no-repeat;
+        background-position: 0px 0px;
+        background-size: 100%;
+    }
+    .safety__car-model img {
+        max-width: 375px;
+        content: url(/images/Car_frame_group_mobile.png);
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+    }
+    .safety__logo {
+        display: none;
+    }
+    .safety__description {
+        width: auto;
+        order: 2;
+        height: 375px;
+    }
+    .safety__rating-five {
+        display: none;
+    }
+    .safety__description-inner {
+        margin-top: 15px;
+    }
+    .safety__subdescription {
+        margin-top: 0px;
+        margin-left: 25px;
+        width: 90%;
+    }
+    .safety__subtitle {
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 37px;
+    }
+    .safety__text {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 18px;
+    }
+    .safety__assessment {
+        display: none;
+    }
+    .safety__order {
+        display: none;
     }
 }
