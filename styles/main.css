@@ -307,7 +307,7 @@ body {
     font-size: 30px;
     line-height: 37px;
     margin: 51px 72px 11px 52px;
-    white-space: nowrap;
+    /* white-space: nowrap; */
 }
 
 .interior__text {
@@ -322,7 +322,7 @@ body {
     flex-direction: column;
     padding: 0;
     list-style: none;
-    margin: 0px 72px 137px 52px;
+    margin: 0px 0px 137px 52px;
 }
 
 .interior__list .interior__item:nth-child(2) {
@@ -411,7 +411,6 @@ body {
 /* Третья секция */
 
 .safety {
-    height: 900px;
     display: flex;
 }
 
@@ -424,13 +423,13 @@ body {
 .safety__car-model {
     position: absolute;
     margin-top: 170px;
-    left: 30.2%;
+    margin-right: 100px;
+    left: 30.3%;
 }
 
 .safety__car-model img {
     position: relative;
-    max-width: 100%;
-    height: auto;
+    width: 100%;
 }
 
 .safety__logo {
@@ -511,6 +510,7 @@ body {
 .assessment__rating-result {
     line-height: 36px;
     margin-right: 37px;
+    white-space: nowrap;
 }
 
 .rating-result__item_active {
@@ -546,6 +546,7 @@ body {
     display: flex;
     align-items: center;
     margin-right: 4%;
+    margin-bottom: 60px;
 }
 
 
@@ -633,7 +634,7 @@ body {
     }
 }
 
-@media (max-width: 768px) and (min-width: 375px) {
+@media (max-width: 768px) {
     .wrapper {
         max-width: 768px;
     }
@@ -672,7 +673,7 @@ body {
         margin: 0px 0px 60px 0px;
     }
     .characteristic__list {
-        max-width: 375px;
+        max-width: 100%;
         max-width: 100%;
         margin: 0px 0px 60px 0px;
     }
@@ -756,6 +757,10 @@ body {
     .interior__title {
         background-image: url(../images/Tesla-interior_tablet.jpg);
         height: 555px;
+        text-align: right;
+    }
+    .interior__title h2 {
+        margin-right: 8%;
     }
     .interior__description {
         display: flex;
@@ -916,7 +921,7 @@ body {
 
 @media (max-width: 530px) {
     .wrapper {
-        max-width: 375px;
+        max-width: 100%;
     }
     .header__logo img {
         width: 138px;
@@ -933,10 +938,14 @@ body {
     .nav__link {
         display: none;
     }
+    .preview {
+        display: flex;
+        flex-direction: column;
+    }
     .preview_model {
-        max-width: 375px;
+        max-width: 100%;
         min-height: 270px;
-        background: url(../images/Tesla-Wordmark-Red.jpg) no-repeat 0px 78px, url(../images/Tesla+car_mobile.jpg) no-repeat 9px calc(50% + 66px);
+        background: url(../images/Tesla-Wordmark-Red.jpg) no-repeat 50% calc(50%), url(../images/Tesla+car_mobile.jpg) no-repeat 50% calc(50% + 66px);
     }
     .preview__model__title {
         font-weight: 600;
@@ -954,7 +963,7 @@ body {
         justify-content: center;
     }
     .characteristic__list {
-        max-width: 375px;
+        max-width: 100%;
         margin: 15px 0px 37px 0px;
     }
     .characteristic__list .characteristic__item:nth-child(1) {
@@ -1033,6 +1042,7 @@ body {
         background-color: #fff;
     }
     .interior__description {
+        margin-top: -20px;
         height: auto;
     }
     .interior__order {
@@ -1040,14 +1050,17 @@ body {
     }
     .interior__title {
         background: url(../images/Tesla-interior_mobile.jpg) no-repeat;
-        background-position: 0px -8px;
-        height: 318px;
+        content: url(../images/Tesla-interior_mobile.jpg);
+        background-position: 50% 8px;
+        background-size: contain;
+        height: 100%;
     }
     .interior__title h2 {
         display: none;
     }
     .interior__subdescription {
         margin: 18px 0px 0px 26px;
+        max-width: 100%;
     }
     .interior__subtitle {
         margin-bottom: 10px;
@@ -1067,10 +1080,10 @@ body {
         background-size: 100%;
     }
     .safety__car-model img {
-        max-width: 375px;
+        max-width: 100%;
         content: url(/images/Car_frame_group_mobile.png);
-        top: 50%;
-        left: 50%;
+        top: 52%;
+        left: 52%;
         margin-right: -50%;
         transform: translate(-50%, -50%);
     }
@@ -1086,10 +1099,11 @@ body {
         display: none;
     }
     .safety__description-inner {
-        margin-top: 15px;
+        margin-top: 0px;
+        margin-bottom: 0px;
     }
     .safety__subdescription {
-        margin-top: 0px;
+        margin-top: 24px;
         margin-left: 25px;
         width: 90%;
     }
@@ -1108,5 +1122,26 @@ body {
     }
     .safety__order {
         display: none;
+    }
+}
+
+@media (max-width: 330px) {
+    .interior__subtitle {
+        white-space: unset;
+    }
+    .characteristic__list {
+        flex-direction: column;
+    }
+    .characteristic__list .characteristic__item:nth-child(1) {
+        margin-bottom: 30px;
+    }
+    .characteristic__list .characteristic__item:nth-child(n) {
+        margin-right: 0;
+    }
+    .preview__order {
+        flex-direction: column;
+    }
+    .order__test {
+        margin-right: 0px;
     }
 }
