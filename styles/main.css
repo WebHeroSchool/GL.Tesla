@@ -5,7 +5,7 @@
 body {
     background-color: #fff;
     color: #000;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat-Regular', sans-serif;
     font-style: normal;
     font-size: 15px;
     line-height: 18px;
@@ -114,10 +114,11 @@ body {
 }
 
 .preview__model__title {
+    font-family: "Montserrat-SemiBold";
     margin: 0;
     padding: 0;
     font-weight: 600;
-    font-size: 95px;
+    font-size: 90px;
     line-height: 110px;
 }
 
@@ -385,6 +386,7 @@ body {
     bottom: 1px solid #fff;
     margin-right: 42px;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 .order__label-more::first-letter {
@@ -424,7 +426,7 @@ body {
     position: absolute;
     margin-top: 170px;
     margin-right: 100px;
-    left: 30.3%;
+    left: 30.1%;
 }
 
 .safety__car-model img {
@@ -438,7 +440,7 @@ body {
     font-size: 11vw;
     color: #E51937;
     opacity: 0.1;
-    right: calc(12.6%);
+    right: calc(10.6%);
     margin-top: 220px;
 }
 
@@ -457,7 +459,7 @@ body {
     flex-direction: column;
     width: 75%;
     margin-top: 50px;
-    margin-bottom: 95px;
+    margin-bottom: 98px;
 }
 
 .safety__subdescription {
@@ -496,7 +498,7 @@ body {
 .assessment__title {
     font-weight: 600;
     font-size: 30px;
-    line-height: 37px;
+    line-height: 35px;
 }
 
 .assessment__name {
@@ -507,8 +509,16 @@ body {
     margin: 0px 0px 15px 0px;
 }
 
+.assessment__name span {
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 12px;
+    text-transform: uppercase;
+    opacity: 0.7;
+}
+
 .assessment__rating-result {
-    line-height: 36px;
+    line-height: 35px;
     margin-right: 37px;
     white-space: nowrap;
 }
@@ -533,13 +543,13 @@ body {
 .rating-five__text_top {
     font-weight: 600;
     font-size: 54px;
-    line-height: 61px;
+    line-height: 50px;
 }
 
 .rating-five__text_bottom {
     font-weight: 600;
     font-size: 28px;
-    line-height: 12px;
+    line-height: 22px;
 }
 
 .safety__order {
@@ -760,7 +770,7 @@ body {
         text-align: right;
     }
     .interior__title h2 {
-        margin-right: 8%;
+        margin-right: 7%;
     }
     .interior__description {
         display: flex;
@@ -878,12 +888,21 @@ body {
     }
     .assessment__item {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-arround;
     }
     .assessment__name {
         display: flex;
         flex-direction: row;
         white-space: nowrap;
+        margin-right: 35px;
+    }
+    .assessment__name span {
+        font-weight: bold;
+        font-size: 10px;
+        line-height: 22px;
+        /* identical to box height */
+        text-transform: uppercase;
+        opacity: 0.7;
     }
     .assessment__rating-result {
         line-height: 36px;
