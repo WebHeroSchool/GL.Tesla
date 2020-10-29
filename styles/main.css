@@ -26,7 +26,7 @@ body {
 }
 
 .header__logo img {
-    width: 166px;
+    width: 167px;
     height: 51px;
 }
 
@@ -34,7 +34,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 24px 60px 55px 42.72px;
+    margin: 24px 60px 62px 42.42px;
 }
 
 .nav__models,
@@ -45,13 +45,18 @@ body {
     white-space: nowrap;
 }
 
+.nav__models {
+    letter-spacing: 0.3px;
+    margin-bottom: 2px;
+}
+
 .nav__models a:nth-child(1) {
-    margin-left: 36.1px;
-    margin-right: 59.4px;
+    margin-left: 37px;
+    margin-right: 59px;
 }
 
 .nav__models a:nth-child(2) {
-    margin-right: 22px;
+    margin-right: 21px;
 }
 
 .nav__models a:nth-child(3) {
@@ -59,24 +64,30 @@ body {
 }
 
 .nav__models a:nth-child(4) {
-    margin-right: 43px;
+    margin-right: 42px;
+}
+
+.nav__login {
+    letter-spacing: 0px;
 }
 
 .nav__login .shop__link {
-    margin-right: 28px;
+    margin-right: 24px;
+    font-size: 17px;
 }
 
 .nav__login .login__link {
-    margin-right: 28px;
+    margin-right: 26px;
+    font-size: 17px;
 }
 
 .nav__link {
     font-weight: 600;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 18px;
     color: #000000;
     text-decoration: none;
-    padding-bottom: 5px;
+    padding-bottom: 7px;
     margin-top: 0px;
     border-bottom: 2px transparent solid;
     transition: 0.2s;
@@ -88,7 +99,7 @@ body {
     color: #E51937;
 }
 
-.burger-menu {
+.burger-menu img {
     width: 24px;
     height: 15px;
     cursor: pointer;
@@ -99,7 +110,7 @@ body {
 
 .preview {
     max-width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 29px;
 }
 
 .preview_model {
@@ -107,10 +118,10 @@ body {
     background-image: url(../images/Tesla+car.jpg);
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: 0px calc(50%);
+    background-position: 0px calc(50% - 9px);
     min-height: 594px;
     max-width: 100%;
-    margin-bottom: 26px;
+    margin-bottom: 22px;
 }
 
 .preview__model__title {
@@ -119,7 +130,8 @@ body {
     padding: 0;
     font-weight: 600;
     font-size: 90px;
-    line-height: 110px;
+    line-height: 102px;
+    letter-spacing: 0.2px;
 }
 
 .preview__model__subtitle {
@@ -128,13 +140,14 @@ body {
     font-weight: 500;
     font-size: 17px;
     line-height: 0px;
+    letter-spacing: 0.1px;
 }
 
 .preview__characteristic {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 27px;
+    margin-bottom: 25px;
     flex-wrap: wrap;
 }
 
@@ -142,80 +155,122 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 105px;
 }
 
 .characteristic__item {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: "Montserrat-Bold", sans-serif;
 }
 
-.characteristic__list {
-    margin-right: 111px;
-}
+
+/* Первый элемент */
 
 .characteristic__list .characteristic__item:nth-child(1) {
-    margin-right: 80px;
+    margin-bottom: 4px;
+    margin-right: 75px;
 }
+
+.characteristic__list .characteristic__item:nth-child(1) .characteristic__img {
+    width: 54px;
+    margin-right: 9.5px;
+    margin-top: 9px;
+    margin-bottom: 7px;
+}
+
+.characteristic__list .characteristic__item:nth-child(1) .characteristic__text_top {
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 33px;
+    white-space: nowrap;
+}
+
+.characteristic__list .characteristic__item:nth-child(1) .characteristic__text_top span {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 24px;
+    margin-left: -3.5px;
+    vertical-align: baseline;
+}
+
+.characteristic__list .characteristic__item:nth-child(1) .characteristic__text_bottom {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.04px;
+}
+
+
+/* Второй элемент */
 
 .characteristic__list .characteristic__item:nth-child(2) .characteristic__img {
-    margin-right: 1px;
+    height: 58px;
+    width: 43px;
+    margin-top: 3px;
+    margin-right: 5px;
 }
 
-.characteristic__text {
-    align-self: flex-start;
+.characteristic__list .characteristic__item:nth-child(2) .characteristic__text_top {
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 30px;
+    white-space: nowrap;
+}
+
+.characteristic__list .characteristic__item:nth-child(2) .characteristic__text_top span {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 24px;
+    margin-left: -3.5px;
+    vertical-align: baseline;
+    letter-spacing: 1px;
+}
+
+.characteristic__list .characteristic__item:nth-child(2) .characteristic__text_bottom {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 23px;
+    letter-spacing: 0.8px;
 }
 
 .preview__order {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.characteristic__img {
-    width: 46px;
-    margin-right: 14px;
-}
-
-.characteristic__text_top {
-    font-weight: 600;
-    font-size: 35px;
-    line-height: 43px;
-    white-space: nowrap;
-}
-
-.characteristic__text_top span {
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 24px;
-    vertical-align: middle;
-    margin-bottom: 13px;
-}
-
-.characteristic__text_bottom {
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 15px;
+    margin-right: 4px;
 }
 
 .test__image {
-    margin-right: 7px;
+    margin-right: 8px;
+    margin-bottom: 10px;
 }
 
 .order__test {
     display: flex;
     align-items: center;
     filter: drop-shadow(0px 4px 2px rgb(150, 150, 150));
-    font-weight: bold;
-    font-size: 13px;
-    line-height: 16px;
-    text-align: center;
-    margin-right: 47px;
-    text-transform: uppercase;
+    margin-right: 38px;
     cursor: pointer;
     transition: transform 1.0s;
     color: #000000;
     white-space: nowrap;
+}
+
+.test__label {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+    margin-bottom: 13px;
+    font-family: 'Montserrat-Bold', sans-serif;
+    word-spacing: 1px;
+}
+
+.test__label span {
+    letter-spacing: 1.3px;
 }
 
 .order__test:hover .test__image {
@@ -251,6 +306,8 @@ body {
     background-color: transparent;
     cursor: pointer;
     transition: color, background-color 0.3s;
+    margin-bottom: 10px;
+    letter-spacing: 0.8px;
 }
 
 .order__button_red {
@@ -294,28 +351,39 @@ body {
     font-size: 70px;
     line-height: 85px;
     color: #E51937;
-    margin: 67px 0px 0px 80px;
+    margin: 69px 0px 0px 80.3px;
+    font-family: 'Montserrat-Bold', sans-serif;
+    letter-spacing: -0.5px;
+    word-spacing: -0.5px;
 }
 
 .interior__description {
     background-color: #E51937;
     height: auto;
-    width: 638px;
+    width: 44%;
 }
 
 .interior__subtitle {
     font-weight: 600;
     font-size: 30px;
-    line-height: 37px;
-    margin: 51px 72px 11px 52px;
+    line-height: 35px;
+    margin: 54px 0px 13px 53px;
+    letter-spacing: 1px;
+    word-spacing: 3px;
     /* white-space: nowrap; */
+}
+
+.interior__subtitle {
+    letter-spacing: 1.5px;
 }
 
 .interior__text {
     font-weight: 500;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 18px;
-    margin: 0px 72px 74px 52px;
+    margin: 0px 72px 71px 52px;
+    letter-spacing: 1.53px;
+    word-spacing: -2px;
 }
 
 .interior__list {
@@ -323,16 +391,7 @@ body {
     flex-direction: column;
     padding: 0;
     list-style: none;
-    margin: 0px 0px 137px 52px;
-}
-
-.interior__list .interior__item:nth-child(2) {
-    margin: 0px 0px 35px 0px;
-}
-
-.interior__list .interior__item:nth-child(3) .interior-item__desc {
-    margin: 5px 0px 0px 8px;
-    line-height: 25px;
+    margin: 0px 0px 135px 52px;
 }
 
 .interior__item {
@@ -341,21 +400,62 @@ body {
     margin-bottom: 35px;
 }
 
+
+/* Картинка. 17 дюймов */
+
+.interior__list .interior__item:nth-child(1) {
+    margin-bottom: 31px;
+}
+
+.interior__list .interior__item:nth-child(1) .interior-item__img {
+    margin-right: 19px;
+}
+
+.interior__list .interior__item:nth-child(1) .interior-item__text {
+    line-height: 21px;
+    letter-spacing: 1px;
+}
+
+.interior__list .interior__item:nth-child(2) {
+    margin: 0px 0px 35px -4px;
+}
+
+.interior-item__title_wireless {
+    font-weight: 600;
+    font-size: 20px;
+    margin: 8.4px 0px 0px 4.5px;
+    letter-spacing: 1px;
+    word-spacing: 1.3px;
+}
+
+.interior__list .interior__item:nth-child(2) .interior-item__text {
+    margin: 2px 0px 0px 4px;
+    letter-spacing: 1px;
+}
+
+.interior__list .interior__item:nth-child(2) {
+    margin: 0px 0px 30px -4px;
+}
+
+.interior__list .interior__item:nth-child(3) .interior-item__desc {
+    margin: 5px 0px 0px 9px;
+    line-height: 27px;
+}
+
+.interior__list .interior__item:nth-child(3) .interior-item__text {
+    margin-top: 1.8px;
+    letter-spacing: 0.8px;
+}
+
 .interior-item__img {
     margin-right: 16px;
 }
 
 .interior-item__title {
     font-weight: 600;
-    font-size: 37px;
+    font-size: 33px;
     margin: 0;
-}
-
-.interior-item__title_wireless {
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 18px;
-    margin: 0;
+    letter-spacing: 1.3px;
 }
 
 .interior-item__text {
@@ -384,9 +484,11 @@ body {
     text-align: center;
     text-transform: uppercase;
     bottom: 1px solid #fff;
-    margin-right: 42px;
+    margin-right: 34px;
     cursor: pointer;
     white-space: nowrap;
+    margin-bottom: 9px;
+    letter-spacing: 0.6px;
 }
 
 .order__label-more::first-letter {
@@ -412,10 +514,6 @@ body {
 
 /* Третья секция */
 
-.safety {
-    display: flex;
-}
-
 .safety__inner {
     max-width: 1440px;
     display: flex;
@@ -423,66 +521,74 @@ body {
 }
 
 .safety__car-model {
-    position: absolute;
-    margin-top: 170px;
-    margin-right: 100px;
-    left: 30.1%;
-}
-
-.safety__car-model img {
-    position: relative;
+    background: url(/images/Car_frame_group.png) no-repeat -95px 56%, url(/images/Model_S_PC.png) no-repeat 207px 19%;
+    /* background-size: contain; */
     width: 100%;
+    z-index: 1;
+    position: relative;
 }
 
 .safety__logo {
-    position: absolute;
     font-weight: 600;
-    font-size: 11vw;
+    font-size: 200px;
+    line-height: 244px;
     color: #E51937;
     opacity: 0.1;
-    right: calc(10.6%);
     margin-top: 220px;
 }
 
 .safety__description {
     display: flex;
     align-items: center;
-    width: 440px;
+    max-width: 440px;
     background-color: #E51937;
     display: flex;
     flex-direction: column;
     color: #ffffff;
+    z-index: 0;
+    position: relative;
 }
 
 .safety__description-inner {
     display: flex;
     flex-direction: column;
-    width: 75%;
-    margin-top: 50px;
+    width: 76%;
+    margin-top: 53px;
     margin-bottom: 98px;
+    margin-left: 6px;
 }
 
 .safety__subdescription {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-bottom: 10px;
+    margin-bottom: 58px;
 }
 
 .safety__subtitle {
+    font-family: 'Montserrat-SemiBold', sans-serif;
     font-weight: 600;
     font-size: 30px;
     line-height: 37px;
     margin: 0;
+    letter-spacing: 1.6px;
+    word-spacing: -5px;
 }
 
 .safety__text {
+    font-family: 'Montserrat-Regular', sans-serif;
     font-weight: 500;
     font-size: 15px;
     line-height: 18px;
+    letter-spacing: 1.3px;
+    word-spacing: -0.3px;
+    margin: 12px 0px 0px 0px;
 }
 
 .assessment__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -490,7 +596,7 @@ body {
 
 .assessment__item {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: space-between;
     flex-direction: row;
 }
@@ -499,14 +605,18 @@ body {
     font-weight: 600;
     font-size: 30px;
     line-height: 35px;
+    margin: 0px 0px 27px 0px;
+    letter-spacing: 2.1px;
 }
 
 .assessment__name {
     font-weight: bold;
     font-size: 17px;
-    line-height: 21px;
+    line-height: 21.8px;
     text-transform: uppercase;
-    margin: 0px 0px 15px 0px;
+    margin: 0px 0px 15.9px 0px;
+    letter-spacing: 1.1px;
+    white-space: nowrap;
 }
 
 .assessment__name span {
@@ -518,45 +628,49 @@ body {
 }
 
 .assessment__rating-result {
-    line-height: 35px;
-    margin-right: 37px;
+    line-height: 33px;
+    margin-right: 44px;
     white-space: nowrap;
+    letter-spacing: -0.3px;
 }
 
 .rating-result__item_active {
     content: url(/images/Star.svg);
+    height: 23px;
 }
 
 .safety__rating-five {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 63px;
+    margin-bottom: 59px;
     margin-left: 30%;
     width: 100%;
 }
 
 .rating-five__shield {
-    margin-right: 20px;
+    margin-right: 22.5px;
 }
 
 .rating-five__text_top {
     font-weight: 600;
-    font-size: 54px;
-    line-height: 50px;
+    font-size: 50px;
+    line-height: 43px;
+    letter-spacing: 2px;
 }
 
 .rating-five__text_bottom {
     font-weight: 600;
-    font-size: 28px;
-    line-height: 22px;
+    font-size: 25px;
+    line-height: 30px;
+    letter-spacing: 1.2px;
 }
 
 .safety__order {
     display: flex;
     align-items: center;
-    margin-right: 4%;
-    margin-bottom: 60px;
+    margin-right: 4.5%;
+    margin-bottom: 50px;
 }
 
 
@@ -583,28 +697,13 @@ body {
         flex-direction: column;
     }
     .safety__car-model {
-        position: relative;
-        margin: 75px 30px 32px 0px;
-        left: 0%;
-        order: 1;
-        background: Url(/images/Model_S.png) no-repeat;
-        background-position: 64% -10px;
-    }
-    .safety__car-model img {
-        max-width: auto;
-        height: auto;
-        content: url(/images/Car_frame_group_tablet.png);
-        top: 50%;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%);
+        z-index: 2;
     }
     .safety__logo {
         display: none;
     }
     .safety__description {
-        width: auto;
-        order: 2;
+        max-width: 100%;
     }
     .safety__rating-five {
         display: none;
@@ -740,7 +839,7 @@ body {
         filter: none;
         margin-right: 48px;
     }
-    .test_label {
+    .test__label {
         line-height: 25px;
     }
     .order__button {
