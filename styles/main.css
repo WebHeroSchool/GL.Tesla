@@ -514,41 +514,46 @@ body {
 
 /* Третья секция */
 
+.safety {
+    display: flex;
+}
+
 .safety__inner {
     max-width: 1440px;
     display: flex;
     flex-direction: row;
-    position: relative;
 }
 
 .safety__car-model {
-    background: url(/images/Car_frame_group.png) no-repeat -95px 56%, url(/images/Model_S_PC.png) no-repeat 207px 19%;
-    /* background-size: contain; */
-    width: 100%;
-    z-index: 1;
+    position: absolute;
+    margin-top: 170px;
+    margin-right: 100px;
+    left: 30.1%;
+}
+
+.safety__car-model img {
     position: relative;
-    left: -250px
+    width: 100%;
 }
 
 .safety__logo {
+    position: absolute;
     font-weight: 600;
-    font-size: 200px;
-    line-height: 244px;
+    font-size: 11vw;
     color: #E51937;
     opacity: 0.1;
+    right: calc(10.6%);
     margin-top: 220px;
 }
 
 .safety__description {
     display: flex;
     align-items: center;
-    max-width: 440px;
+    width: 440px;
     background-color: #E51937;
     display: flex;
     flex-direction: column;
     color: #ffffff;
-    z-index: 2;
-    position: relative;
 }
 
 .safety__description-inner {
@@ -696,20 +701,30 @@ body {
     }
     /* Третья секция */
     .safety__inner {
-        flex-direction: column-reverse;
-        justify-content: space-between;
+        flex-direction: column;
     }
     .safety__car-model {
-        height: 900px;
         position: relative;
+        margin: 75px 30px 32px 0px;
+        left: 0%;
         order: 1;
+        background: Url(/images/Model_S.png) no-repeat;
+        background-position: 64% -10px;
+    }
+    .safety__car-model img {
+        max-width: auto;
+        height: auto;
+        content: url(/images/Car_frame_group_tablet.png);
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
     }
     .safety__logo {
         display: none;
     }
     .safety__description {
         max-width: 100%;
-        order 2;
     }
     .safety__rating-five {
         display: none;
@@ -845,7 +860,7 @@ body {
         filter: none;
         margin-right: 48px;
     }
-    .test__label {
+    .test_label {
         line-height: 25px;
     }
     .order__button {
