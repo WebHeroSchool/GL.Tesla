@@ -1165,12 +1165,12 @@ body {
     }
     /* Характеристики */
     .preview__characteristic {
-        margin: 0px 0px 26px 0px;
+        margin: 0px 0px 21px 0px;
         justify-content: center;
     }
     .characteristic__list {
         max-width: 100%;
-        margin: 15px 10.5px 37px 0px;
+        margin: 15px 10.5px 40px 0px;
     }
     /* Первый элемент */
     .characteristic__list .characteristic__item:nth-child(1) {
@@ -1244,13 +1244,24 @@ body {
         align-items: center;
         color: #E51937;
         filter: none;
-        margin-right: 32px;
+        margin-right: 24px;
     }
     .test__image {
         width: 22px;
         height: 22px;
         content: url(../images/Test-drive_red.svg);
-        margin-right: 7px;
+        margin-right: 7.8px;
+    }
+    .test__label {
+        font-weight: bold;
+        font-size: 13px;
+        line-height: 22px;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 13.5px;
+        font-family: 'Montserrat-Bold', sans-serif;
+        letter-spacing: 0.1px;
+        word-spacing: 0.5px;
     }
     .order__button {
         font-weight: bold;
@@ -1264,45 +1275,59 @@ body {
         color: #fff;
         transition: 0.2s;
     }
+    .preview__vector-bottom img {
+        margin-left: 2px;
+    }
     .order__button:hover,
     .order__button:focus {
         color: #E51937;
         background-color: #fff;
     }
     .interior__description {
-        margin-top: -20px;
+        margin-top: -11px;
         height: auto;
     }
     .interior__order {
         display: none;
     }
     .interior__title {
-        background: url(../images/Tesla-interior_mobile.jpg) no-repeat;
+        background-image: none;
         content: url(../images/Tesla-interior_mobile.jpg);
-        background-position: 50% 8px;
-        background-size: contain;
-        height: 100%;
+        max-height: 337px;
+        margin-top: -8px;
     }
     .interior__title h2 {
         display: none;
     }
     .interior__subdescription {
-        margin: 50px 0px 50px 26px;
+        margin: 20px 0px 40px 26px;
         max-width: 100%;
     }
     .interior__subtitle {
-        margin-bottom: 10px;
+        margin-bottom: 8px;
         text-align: left;
+    }
+    .interior__subtitle span {
+        letter-spacing: 1.8px;
     }
     .interior__text {
         align-self: flex-start;
     }
     /* Третья секция */
+    .safety__inner {
+        background-image: url(/images/Model_S_mobile.png);
+        background-position-y: 8%;
+        ;
+    }
     .safety__car-model {
         order: 2;
+        margin-top: 57px;
+        padding-left: 0px;
+        padding-right: 3px;
+        padding-bottom: 27px;
     }
     .safety__car-model img {
-        max-width: 100%;
+        max-width: 97%;
         content: url(/images/Car_frame_group_mobile.png);
     }
     .safety__description {
@@ -1318,19 +1343,23 @@ body {
         margin-bottom: 0px;
     }
     .safety__subdescription {
-        margin-top: 24px;
+        margin-top: 20px;
         margin-left: 25px;
         width: 90%;
     }
     .safety__subtitle {
         font-weight: 600;
-        font-size: 20px;
-        line-height: 20px;
+        font-size: 30px;
+        line-height: 36px;
+        margin-top: 0px;
+        margin-bottom: 0.4px;
     }
     .safety__text {
         font-weight: 500;
         font-size: 15px;
         line-height: 18px;
+        margin-left: 1px;
+        letter-spacing: 1.2px;
     }
     .safety__assessment {
         display: none;
