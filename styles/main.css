@@ -355,6 +355,7 @@ body {
     font-family: 'Montserrat-Bold', sans-serif;
     letter-spacing: -0.5px;
     word-spacing: -0.5px;
+    white-space: nowrap;
 }
 
 .interior__description {
@@ -416,9 +417,8 @@ body {
     letter-spacing: 1px;
 }
 
-.interior__list .interior__item:nth-child(2) {
-    margin: 0px 0px 35px -4px;
-}
+
+/* Беспроводное обновление ПО */
 
 .interior-item__title_wireless {
     font-weight: 600;
@@ -436,6 +436,9 @@ body {
 .interior__list .interior__item:nth-child(2) {
     margin: 0px 0px 30px -4px;
 }
+
+
+/* 894 литра */
 
 .interior__list .interior__item:nth-child(3) .interior-item__desc {
     margin: 5px 0px 0px 9px;
@@ -514,21 +517,19 @@ body {
 
 /* Третья секция */
 
-.safety {
-    display: flex;
-}
-
 .safety__inner {
+    background-image: url(/images/Model_S_PC.png);
+    background-repeat: no-repeat;
+    background-position: right 23%;
     max-width: 1440px;
     display: flex;
     flex-direction: row;
+    position: relative;
 }
 
 .safety__car-model {
-    position: absolute;
     margin-top: 170px;
-    margin-right: 100px;
-    left: 30.1%;
+    padding-left: 344px;
 }
 
 .safety__car-model img {
@@ -536,24 +537,15 @@ body {
     width: 100%;
 }
 
-.safety__logo {
-    position: absolute;
-    font-weight: 600;
-    font-size: 11vw;
-    color: #E51937;
-    opacity: 0.1;
-    right: calc(10.6%);
-    margin-top: 220px;
-}
-
 .safety__description {
     display: flex;
     align-items: center;
-    width: 440px;
+    max-width: 440px;
     background-color: #E51937;
     display: flex;
     flex-direction: column;
     color: #ffffff;
+    position: absolute;
 }
 
 .safety__description-inner {
@@ -683,14 +675,20 @@ body {
 
 /* Адаптивы */
 
-@media (max-width: 1024px) and (min-width: 768px) {
+@media (max-width: 1230px) {
+    .safety__inner {
+        background-image: none;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
     .nav__link {
         display: none;
     }
     .preview__characteristic {
         justify-content: flex-start;
         align-items: center;
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
     .characteristic__list {
         margin-right: 0px;
@@ -699,38 +697,33 @@ body {
         margin-top: 34px;
         max-width: 100%;
     }
+    /* Вторая секция */
+    .interior__description {
+        width: 900px;
+    }
     /* Третья секция */
     .safety__inner {
-        flex-direction: column;
+        flex-direction: column-reverse;
+        background-image: none;
     }
     .safety__car-model {
-        position: relative;
-        margin: 75px 30px 32px 0px;
-        left: 0%;
-        order: 1;
-        background: Url(/images/Model_S.png) no-repeat;
-        background-position: 64% -10px;
+        /* position: static; */
+        margin-top: 70px;
+        padding-left: 0px;
     }
     .safety__car-model img {
-        max-width: auto;
-        height: auto;
         content: url(/images/Car_frame_group_tablet.png);
-        top: 50%;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%);
-    }
-    .safety__logo {
-        display: none;
+        padding-bottom: 20px;
     }
     .safety__description {
         max-width: 100%;
+        position: static;
     }
     .safety__rating-five {
         display: none;
     }
     .safety__subdescription {
-        width: 40%;
+        width: 42%;
     }
     .safety__description-inner {
         display: flex;
@@ -774,7 +767,7 @@ body {
         margin-right: 15px;
     }
     .header__nav {
-        margin: 25px 19px 75px 15px;
+        margin: 25px 19px 85px 15px;
     }
     .nav__link {
         display: none;
@@ -786,12 +779,12 @@ body {
         max-width: 768px;
         min-height: 550px;
         background-image: url(../images/Tesla+car_tablet.jpg);
-        background-position: 0px calc(50% + 40px);
+        background-position: 0px calc(50% + 30px);
     }
     .preview__model__title {
         font-weight: 600;
         font-size: 90px;
-        line-height: 110px;
+        line-height: 100px;
     }
     .preview__model__subtitle {
         font-weight: 500;
@@ -800,12 +793,12 @@ body {
     }
     /* Характеристики */
     .preview__characteristic {
-        margin: 0px 0px 60px 0px;
+        margin: 0px 0px 50px 0px;
     }
     .characteristic__list {
         max-width: 100%;
         max-width: 100%;
-        margin: 0px 0px 60px 0px;
+        margin: 0px 17px 42px 0px;
     }
     .characteristic__item {
         margin-right: 0px;
@@ -813,41 +806,60 @@ body {
     .characteristic__img {
         width: 69px;
     }
-    .characteristic__list .characteristic__item:nth-child(2) .characteristic__img {
-        content: url(../images/Road_icon_tablet.png);
-        height: 73px;
-        width: 50px;
-        margin-right: 14px;
-    }
+    /* Первый элемент */
     .characteristic__list .characteristic__item:nth-child(1) {
-        margin: 0px 78px 0px 0px;
+        margin-bottom: 4px;
+        margin-right: 76px;
     }
-    .characteristic__list .characteristic__item:nth-child(2) {
-        margin: 0px 5px 0px 0px;
+    .characteristic__list .characteristic__item:nth-child(1) .characteristic__img {
+        width: 77px;
+        margin-right: 14px;
+        margin-top: 0px;
+        margin-bottom: 8px;
     }
-    .characteristic__text_top {
-        font-weight: 600;
-        font-size: 55px;
-        line-height: 51px;
+    .characteristic__list .characteristic__item:nth-child(1) .characteristic__text_top {
+        font-size: 50px;
+        line-height: 32px;
     }
-    .characteristic__text_top span {
-        font-weight: 600;
+    .characteristic__list .characteristic__item:nth-child(1) .characteristic__text_top span {
         font-size: 20px;
-        line-height: 23px;
+        line-height: 24px;
+        margin-left: -5px;
+        vertical-align: middle;
+        letter-spacing: 1.5px;
     }
-    .characteristic__text_bottom {
-        font-weight: normal;
+    .characteristic__list .characteristic__item:nth-child(1) .characteristic__text_bottom {
         font-size: 12px;
-        line-height: 15px;
+        line-height: 36px;
+        letter-spacing: 0.04px;
     }
+    /* Второй элемент */
+    .characteristic__list .characteristic__item:nth-child(2) .characteristic__img {
+        height: 82px;
+        width: 55px;
+        margin-top: 2px;
+        margin-right: 10px;
+    }
+    .characteristic__list .characteristic__item:nth-child(2) .characteristic__text_top {
+        font-size: 50px;
+        line-height: 26px;
+        white-space: nowrap;
+    }
+    .characteristic__list .characteristic__item:nth-child(2) .characteristic__text_top span {
+        font-size: 20px;
+        line-height: 24px;
+        margin-left: -3.5px;
+        vertical-align: middle;
+        letter-spacing: 2px;
+    }
+    .characteristic__list .characteristic__item:nth-child(2) .characteristic__text_bottom {
+        font-size: 12px;
+        line-height: 43.5px;
+        letter-spacing: 0.8px;
+    }
+    /* Тест драйв, кнопка Заказать */
     .preview__order {
         margin: 0px;
-    }
-    .test__image {
-        width: 30px;
-        height: 30px;
-        content: url(../images/Test-drive_red.svg);
-        margin-right: 15px;
     }
     .order__test {
         font-weight: bold;
@@ -858,17 +870,31 @@ body {
         text-transform: uppercase;
         color: #E51937;
         filter: none;
-        margin-right: 48px;
+        margin-right: 40px;
     }
-    .test_label {
+    .test__image {
+        width: 30px;
+        height: 30px;
+        content: url(../images/Test-drive_red.svg);
+        margin-right: 16px;
+    }
+    .test__label {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 16px;
         line-height: 25px;
+        text-align: center;
+        margin-bottom: 18px;
+        font-family: 'Montserrat-Bold', sans-serif;
+        letter-spacing: 0.5px;
+        word-spacing: 0px;
     }
     .order__button {
         font-weight: bold;
         font-size: 16px;
         line-height: 20px;
         text-transform: uppercase;
-        width: 220px;
+        width: 221px;
         height: 55px;
         background-color: #E51937;
         color: #fff;
@@ -890,7 +916,7 @@ body {
         text-align: right;
     }
     .interior__title h2 {
-        margin-right: 7%;
+        margin-right: 6%;
     }
     .interior__description {
         display: flex;
@@ -901,13 +927,14 @@ body {
     .interior__subdescription {
         display: flex;
         flex-direction: column;
-        margin: 58px 120px 0px 35px;
+        margin: 58px 108px 0px 35px;
     }
     .interior__subtitle {
         font-weight: 600;
         font-size: 30px;
         line-height: 37px;
         margin: 0px 0px 20px 0px;
+        letter-spacing: 1.4px;
     }
     .interior__text {
         font-weight: 500;
@@ -927,20 +954,27 @@ body {
     .interior-item__title_wireless {
         margin-top: 5px;
     }
+    /* Картинка. 17 дюймов */
+    .interior__list .interior__item:nth-child(1) {
+        margin-bottom: 18px;
+    }
+    /* Беспроводное обновление ПО */
     .interior__list .interior__item:nth-child(2) {
-        margin: 0px 0px 25px 0px;
+        margin: 0px 0px 24px -4px;
     }
-    .interior__list .interior__item:nth-child(2) img {
-        height: 34px;
-        width: 44px;
+    .interior-item__title_wireless {
+        margin: 8.4px 0px 0px 4.5px;
     }
-    .interior__list .interior__item:nth-child(3) .interior-item__desc {
-        margin: 0px 0px 0px 8px;
-        line-height: 35px;
+    /* 894 литра */
+    .interior__list .interior__item:nth-child(3) .interior-item__text {
+        margin-top: 1.8px;
+        letter-spacing: 0.8px;
     }
+    /* Узнать больше, Заказть */
     .interior__order {
+        margin-top: 50px;
         margin-left: 155px;
-        margin-bottom: 32px;
+        margin-bottom: 40px;
     }
     .order__label-more {
         font-weight: bold;
@@ -949,7 +983,7 @@ body {
         align-items: center;
         text-align: center;
         text-transform: uppercase;
-        margin-right: 53px;
+        margin-right: 46px;
         white-space: nowrap;
     }
     .order__label-more::first-letter {
@@ -962,31 +996,23 @@ body {
     }
     /* Третья секция */
     .safety__inner {
-        flex-direction: column;
+        flex-direction: column-reverse;
+        background: url(/images/Model_S_Tablet.png) no-repeat;
+        background-position: 53.5% 7.5%;
     }
     .safety__car-model {
-        position: relative;
-        margin: 75px 30px 32px 0px;
-        left: 0%;
-        order: 1;
-        background: Url(/images/Model_S.png) no-repeat;
-        background-position: 64% -10px;
+        margin-top: 75px;
+        padding-left: 0px;
+        padding-right: 3px;
+        padding-bottom: 32px;
     }
     .safety__car-model img {
-        max-width: auto;
-        height: auto;
         content: url(/images/Car_frame_group_tablet.png);
-        top: 50%;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%);
-    }
-    .safety__logo {
-        display: none;
+        max-width: 96%;
     }
     .safety__description {
-        width: auto;
-        order: 2;
+        max-width: 100%;
+        position: static;
     }
     .safety__rating-five {
         display: none;
@@ -999,7 +1025,14 @@ body {
         flex-direction: row;
         justify-content: space-around;
         width: 100%;
-        margin: 50px 0px 62px 0px;
+        margin: 50px 0px 28px 0px;
+    }
+    .safety__subtitle {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 37px;
+        letter-spacing: 1px;
     }
     .assessment__title {
         font-weight: 600;
@@ -1031,27 +1064,29 @@ body {
     }
     .safety__order {
         margin-right: 0;
-        margin-bottom: 65px;
+        margin-bottom: 21px;
     }
 }
 
-@media (max-width: 722px) {
+@media (max-width: 702px) {
     .interior__list {
         display: none;
-    }
-    .interior__description {
-        justify-content: center;
-    }
-    .interior__text {
-        width: 80%;
-        align-self: center;
     }
     .interior__subtitle {
         text-align: center;
     }
     .interior__subdescription {
-        margin-left: 0px;
-        margin-right: 0px;
+        margin-left: 50px;
+        margin-right: 50px;
+        width: 100%;
+    }
+    .interior__text {
+        width: 100%;
+    }
+    .interior__description {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .interior__order {
         margin-left: 0px;
@@ -1198,7 +1233,7 @@ body {
         display: none;
     }
     .interior__subdescription {
-        margin: 18px 0px 0px 26px;
+        margin: 50px 0px 50px 26px;
         max-width: 100%;
     }
     .interior__subtitle {
@@ -1206,28 +1241,15 @@ body {
         text-align: left;
     }
     .interior__text {
-        margin-bottom: 40px;
         align-self: flex-start;
     }
     /* Третья секция */
     .safety__car-model {
-        position: relative;
-        margin: 55px 30px 32px 0px;
-        order: 1;
-        background: Url(/images/Model_S.png) no-repeat;
-        background-position: 0px 0px;
-        background-size: 100%;
+        order: 2;
     }
     .safety__car-model img {
         max-width: 100%;
         content: url(/images/Car_frame_group_mobile.png);
-        top: 52%;
-        left: 52%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%);
-    }
-    .safety__logo {
-        display: none;
     }
     .safety__description {
         width: auto;
@@ -1248,8 +1270,8 @@ body {
     }
     .safety__subtitle {
         font-weight: 600;
-        font-size: 30px;
-        line-height: 37px;
+        font-size: 20px;
+        line-height: 20px;
     }
     .safety__text {
         font-weight: 500;
@@ -1265,6 +1287,13 @@ body {
 }
 
 @media (max-width: 330px) {
+    .header__logo img {
+        width: 55px;
+        height: 20px;
+    }
+    .preview__model__title {
+        font-size: 20px;
+    }
     .interior__subtitle {
         white-space: unset;
     }
