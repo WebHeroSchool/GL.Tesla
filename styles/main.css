@@ -1018,53 +1018,85 @@ body {
         display: none;
     }
     .safety__subdescription {
-        width: 40%;
+        width: 42%;
+        margin-left: 3px;
     }
     .safety__description-inner {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         width: 100%;
-        margin: 50px 0px 28px 0px;
+        margin: 50px 0px 34px 0px;
     }
     .safety__subtitle {
         font-style: normal;
         font-weight: 600;
         font-size: 30px;
-        line-height: 37px;
+        line-height: 36px;
         letter-spacing: 1px;
+        margin-top: 10px;
+        margin: 15px 0px 2px 0px;
+        letter-spacing: 1.22px;
+        word-spacing: -1.3px;
+    }
+    .safety__text {
+        font-weight: 500;
+        letter-spacing: 1.3px;
+        word-spacing: -0.5px;
+        /* letter-spacing: 1.3px;
+    word-spacing: -0.3px; */
+    }
+    .safety__assessment {
+        margin-right: 1%;
     }
     .assessment__title {
         font-weight: 600;
         font-size: 30px;
-        margin-top: 10px;
+        margin: 16px 0px 28px 2px;
+        letter-spacing: 2px;
     }
     .assessment__item {
         display: flex;
-        justify-content: space-arround;
+        justify-content: space-between
     }
     .assessment__name {
         display: flex;
         flex-direction: row;
         white-space: nowrap;
-        margin-right: 35px;
+        margin: 1px 29px 0px 1px;
+        letter-spacing: 1.1px;
     }
     .assessment__name span {
         font-weight: bold;
         font-size: 10px;
-        line-height: 22px;
-        /* identical to box height */
+        line-height: 29px;
         text-transform: uppercase;
         opacity: 0.7;
+        margin-left: 1px;
     }
+    /* Сбоку */
+    .assessment__list .assessment__item:nth-child(3) .assessment__name {
+        margin-bottom: 9px;
+    }
+    /* Сбоку (стойка) */
+    /* .assessment__list .assessment__item:nth-child(2) .assessment__name {
+        margin-bottom: 16px;
+    } */
+    /* Водитель */
+    /* .assessment__list .assessment__item:nth-child(2) .assessment__name {
+        margin-bottom: 18px;
+    } */
     .assessment__rating-result {
+        margin-right: 16px;
+        margin-left: 0px;
         line-height: 36px;
-        margin-right: 12px;
-        margin-left: 10px;
+    }
+    .rating-result__item_active {
+        margin-top: -1px;
     }
     .safety__order {
         margin-right: 0;
-        margin-bottom: 21px;
+        margin-bottom: 52px;
     }
 }
 
@@ -1138,37 +1170,59 @@ body {
     }
     .characteristic__list {
         max-width: 100%;
-        margin: 15px 0px 37px 0px;
+        margin: 15px 10.5px 37px 0px;
     }
+    /* Первый элемент */
     .characteristic__list .characteristic__item:nth-child(1) {
-        margin: 0px 46px 0px 0px;
+        margin-bottom: 4px;
+        margin-right: 40px;
     }
-    .characteristic__list .characteristic__item:nth-child(2) {
-        margin: 0px 14px 0px 0px;
+    .characteristic__list .characteristic__item:nth-child(1) .characteristic__img {
+        width: 45px;
+        margin-right: 10px;
+        margin-top: 10px;
+        margin-bottom: 0px;
     }
-    .characteristic__img {
-        width: 38px;
-    }
-    .characteristic__list .characteristic__item:nth-child(2) .characteristic__img {
-        content: url(../images/Road_icon_mobile.png);
-        height: 45px;
-        width: 24px;
-        margin-right: 14px;
-    }
-    .characteristic__text_top {
-        font-weight: 600;
+    .characteristic__list .characteristic__item:nth-child(1) .characteristic__text_top {
         font-size: 27px;
-        line-height: 33px;
+        line-height: 36px;
     }
-    .characteristic__text_top span {
-        font-weight: 600;
+    .characteristic__list .characteristic__item:nth-child(1) .characteristic__text_top span {
         font-size: 15px;
         line-height: 18px;
+        margin-left: 0px;
+        vertical-align: baseline;
+        letter-spacing: 1.5px;
     }
-    .characteristic__text_bottom {
-        font-weight: normal;
+    .characteristic__list .characteristic__item:nth-child(1) .characteristic__text_bottom {
         font-size: 10px;
-        line-height: 12px;
+        line-height: 6px;
+        letter-spacing: 0.04px;
+    }
+    /* Второй элемент */
+    .characteristic__list .characteristic__item:nth-child(2) .characteristic__img {
+        content: url(../images/Road_icon_mobile.png);
+        height: 42px;
+        width: 28px;
+        margin-top: 1px;
+        margin-right: 10px;
+    }
+    .characteristic__list .characteristic__item:nth-child(2) .characteristic__text_top {
+        font-size: 27px;
+        line-height: 32px;
+        white-space: nowrap;
+    }
+    .characteristic__list .characteristic__item:nth-child(2) .characteristic__text_top span {
+        font-size: 15px;
+        line-height: 18px;
+        margin-left: 0px;
+        vertical-align: baseline;
+        letter-spacing: 2px;
+    }
+    .characteristic__list .characteristic__item:nth-child(2) .characteristic__text_bottom {
+        font-size: 10px;
+        line-height: 10px;
+        letter-spacing: 0.8px;
     }
     .preview__order {
         font-weight: bold;
@@ -1283,6 +1337,12 @@ body {
     }
     .safety__order {
         display: none;
+    }
+}
+
+@media (max-width: 375px) {
+    .header__nav {
+        margin-bottom: 27px;
     }
 }
 
