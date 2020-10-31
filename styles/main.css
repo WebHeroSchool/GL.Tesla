@@ -916,7 +916,7 @@ body {
         text-align: right;
     }
     .interior__title h2 {
-        margin-right: 6%;
+        margin-right: 6.2%;
     }
     .interior__description {
         display: flex;
@@ -1151,7 +1151,7 @@ body {
     .preview_model {
         max-width: 100%;
         min-height: 270px;
-        background: url(../images/Tesla-Wordmark-Red.jpg) no-repeat 50% calc(50%), url(../images/Tesla+car_mobile.jpg) no-repeat 50% calc(50% + 66px);
+        background: url(../images/Tesla-Wordmark-Red.jpg) no-repeat 50% 59%, url(../images/Tesla+car_mobile.jpg) no-repeat 50% calc(50% + 66px);
     }
     .preview__model__title {
         font-weight: 600;
@@ -1333,7 +1333,7 @@ body {
     .safety__description {
         width: auto;
         order: 2;
-        height: 375px;
+        max-height: 375px;
     }
     .safety__rating-five {
         display: none;
@@ -1341,6 +1341,7 @@ body {
     .safety__description-inner {
         margin-top: 0px;
         margin-bottom: 0px;
+        height: auto;
     }
     .safety__subdescription {
         margin-top: 20px;
